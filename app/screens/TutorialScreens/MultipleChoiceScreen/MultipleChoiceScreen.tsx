@@ -1,13 +1,12 @@
-import { Button } from "@/app/components/Button/Button";
-import { QuestionStep } from "@/app/components/Question/Question";
-import { QuestionAction } from "@/app/components/QuestionAction/QuestionAction";
-import { QuestionCard } from "@/app/components/QuestionCard/QuestionCard";
-import { QuestionCardContent } from "@/app/components/QuestionCardContent/QuestionCardContent";
-import Tooltip from "@/app/components/Tooltip/Tooltip";
-import { ONE_MINUTE_IN_MILISECONDS } from "@/app/utils/dateUtils";
+import { Button } from "@chomp/app/components/Button/Button";
+import { QuestionStep } from "@chomp/app/components/Question/Question";
+import { QuestionAction } from "@chomp/app/components/QuestionAction/QuestionAction";
+import { QuestionCard } from "@chomp/app/components/QuestionCard/QuestionCard";
+import { QuestionCardContent } from "@chomp/app/components/QuestionCardContent/QuestionCardContent";
+import Tooltip from "@chomp/app/components/Tooltip/Tooltip";
+import { getDueAt, ONE_MINUTE_IN_MILISECONDS } from "@chomp/app/utils/dateUtils";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { QuestionType } from "@prisma/client";
-import dayjs from "dayjs";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { STEPS } from "./constants";
 
@@ -16,10 +15,6 @@ interface Props {
     SetStateAction<"binary-question" | "multiple-choice" | "reveal" | null>
   >;
 }
-
-const getDueAt = (durationMiliseconds: number): Date => {
-  return dayjs(new Date()).add(durationMiliseconds, "milliseconds").toDate();
-};
 
 const MultipleChoiceScreen = ({ setActiveScreen }: Props) => {
   const { user } = useDynamicContext();

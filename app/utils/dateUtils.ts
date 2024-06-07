@@ -58,3 +58,7 @@ export const getTimeString = (date: Date) => {
 
 export const getDailyDeckFormattedString = (date: Date) =>
   dayjs(date).format("MMMM DD YYYY").toString();
+
+export const getDueAt = (durationMiliseconds: number): Date => {
+  return dayjs(new Date()).add(durationMiliseconds, "milliseconds").toDate();
+};

@@ -1,22 +1,21 @@
 "use client";
 
-import { Button } from "@/app/components/Button/Button";
-import { HalfArrowRightIcon } from "@/app/components/Icons/HalfArrowRightIcon";
-import { QuestionStep } from "@/app/components/Question/Question";
-import { QuestionAction } from "@/app/components/QuestionAction/QuestionAction";
-import { QuestionCard } from "@/app/components/QuestionCard/QuestionCard";
-import { QuestionCardContent } from "@/app/components/QuestionCardContent/QuestionCardContent";
-import Tooltip from "@/app/components/Tooltip/Tooltip";
-import { ONE_MINUTE_IN_MILISECONDS } from "@/app/utils/dateUtils";
+import { Button } from "@chomp/app/components/Button/Button";
+import { HalfArrowRightIcon } from "@chomp/app/components/Icons/HalfArrowRightIcon";
+import { QuestionStep } from "@chomp/app/components/Question/Question";
+import { QuestionAction } from "@chomp/app/components/QuestionAction/QuestionAction";
+import { QuestionCard } from "@chomp/app/components/QuestionCard/QuestionCard";
+import { QuestionCardContent } from "@chomp/app/components/QuestionCardContent/QuestionCardContent";
+import Tooltip from "@chomp/app/components/Tooltip/Tooltip";
+import {
+  ONE_MINUTE_IN_MILISECONDS,
+  getDueAt,
+} from "@chomp/app/utils/dateUtils";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { QuestionType } from "@prisma/client";
 import dayjs from "dayjs";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { STEPS } from "./constants";
-
-const getDueAt = (durationMiliseconds: number): Date => {
-  return dayjs(new Date()).add(durationMiliseconds, "milliseconds").toDate();
-};
 
 interface Props {
   setActiveScreen: Dispatch<
@@ -28,17 +27,18 @@ const BinaryQuestionScreen = ({ setActiveScreen }: Props) => {
   const { user } = useDynamicContext();
   const [optionPercentage, setOptionPercentage] = useState(50);
   const [currentOptionSelected, setCurrentOptionSelected] = useState<number>();
-  const [dueAt, setDueAt] = useState(getDueAt(ONE_MINUTE_IN_MILISECONDS));
+  const oneMinuteDue = getDueAt(ONE_MINUTE_IN_MILISECONDS);
+  const [dueAt, setDueAt] = useState(oneMinuteDue);
   const [tooltipIndex, setTooltipIndex] = useState(0);
   const [isFlowFinished, setIsFlowFinished] = useState(false);
 
   const handleGoToNextTooltip = () => {
     if (tooltipIndex === STEPS.length - 1) return;
     if (tooltipIndex === 1) {
-      const tutoiralContainer = document.getElementById("tutorial-container")!;
+      const tutorialContainer = document.getElementById("tutorial-container")!;
 
-      tutoiralContainer.scroll({
-        top: tutoiralContainer!.scrollHeight,
+      tutorialContainer.scroll({
+        top: tutorialContainer!.scrollHeight,
         behavior: "smooth",
       });
     }
@@ -56,6 +56,7 @@ const BinaryQuestionScreen = ({ setActiveScreen }: Props) => {
       `${user?.userId}-seen-tutorial-screens`,
       JSON.stringify(["binary-question"]),
     );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -79,7 +80,7 @@ const BinaryQuestionScreen = ({ setActiveScreen }: Props) => {
             viewImageSrc="/test"
             step={0}
             onDurationRanOut={() =>
-              setDueAt(getDueAt(ONE_MINUTE_IN_MILISECONDS))
+              setDueAt(oneMinuteDue)
             }
             className={`relative w-full mx-auto drop-shadow-question-card border-opacity-40 ${STEPS[tooltipIndex].isQuestionCardTooltip ? "z-0" : "!-z-10"}`}
           >

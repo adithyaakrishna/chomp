@@ -1,16 +1,16 @@
 "use client";
-import { saveQuestion, SaveQuestionRequest } from "@/app/actions/answer";
-import { useRandom } from "@/app/hooks/useRandom";
-import { useStopwatch } from "@/app/hooks/useStopwatch";
-import { getAlphaIdentifier } from "@/app/utils/question";
+import { saveQuestion, SaveQuestionRequest } from "@chomp/app/actions/answer";
+import { useRandom } from "@chomp/app/hooks/useRandom";
+import { useStopwatch } from "@chomp/app/hooks/useStopwatch";
+import { getAlphaIdentifier } from "@chomp/app/utils/question";
 import { QuestionTag, QuestionType, Tag } from "@prisma/client";
-import dayjs from "dayjs";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { AnswerHeader } from "../AnswerHeader/AnswerHeader";
 import { QuestionAction } from "../QuestionAction/QuestionAction";
 import { QuestionCard } from "../QuestionCard/QuestionCard";
 import { QuestionCardContent } from "../QuestionCardContent/QuestionCardContent";
+import { getDueAt } from "@chomp/app/utils/dateUtils";
 
 export enum QuestionStep {
   AnswerQuestion = 1,
@@ -38,10 +38,6 @@ type Question = {
 type QuestionProps = {
   question: Question;
   returnUrl: string;
-};
-
-const getDueAt = (durationMiliseconds: number): Date => {
-  return dayjs(new Date()).add(durationMiliseconds, "milliseconds").toDate();
 };
 
 export function Question({ question, returnUrl }: QuestionProps) {
