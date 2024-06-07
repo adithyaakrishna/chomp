@@ -1,7 +1,7 @@
-import { ChompFlatIcon } from "@/app/components/Icons/ChompFlatIcon";
-import ChompIcon from "@/app/components/Icons/ChompIcon";
-import { CopyIcon } from "@/app/components/Icons/CopyIcon";
-import { ExitIcon } from "@/app/components/Icons/ExitIcon";
+import { ChompFlatIcon } from "@chomp/app/components/Icons/ChompFlatIcon";
+import ChompIcon from "@chomp/app/components/Icons/ChompIcon";
+import { CopyIcon } from "@chomp/app/components/Icons/CopyIcon";
+import { ExitIcon } from "@chomp/app/components/Icons/ExitIcon";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ReactElement, cloneElement } from "react";
 import { AddIcon } from "../app/components/Icons/AddIcon";

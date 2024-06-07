@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { GraphicsProps } from ".";
-import chompGraphicImage from "../../../public/images/chomp-graphic.png";
+import chompGraphicImage from "/images/chomp-graphic.png";
 
 export function ChompGraphic({
   width = 115,

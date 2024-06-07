@@ -1,7 +1,7 @@
 "use client";
-import { useWindowSize } from "@/app/hooks/useWindowSize";
-import { ElementType } from "@/app/queries/question";
-import { DeckQuestionIncludes } from "@/app/utils/question";
+import { useWindowSize } from "@chomp/app/hooks/useWindowSize";
+import { ElementType } from "@chomp/app/queries/question";
+import { DeckQuestionIncludes } from "@chomp/app/utils/question";
 import { Deck } from "@prisma/client";
 import { useEffect, useRef } from "react";
 import { Virtuoso, VirtuosoHandle } from "react-virtuoso";

@@ -1,5 +1,5 @@
-import { getJwtPayload } from "@/app/actions/jwt";
-import { getHistory } from "@/app/queries/question";
+import { getJwtPayload } from "@chomp/app/actions/jwt";
+import { getHistory } from "@chomp/app/queries/question";
 
 export enum HistorySortOptions {
   Date = "Date",

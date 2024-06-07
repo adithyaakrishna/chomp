@@ -1,4 +1,4 @@
-import { DeckQuestionIncludes, getDeckState } from "@/app/utils/question";
+import { DeckQuestionIncludes, getDeckState } from "@chomp/app/utils/question";
 import { ChompResult, Deck } from "@prisma/client";
 import Link from "next/link";
 import { QuestionDeck } from "../QuestionDeck/QuestionDeck";

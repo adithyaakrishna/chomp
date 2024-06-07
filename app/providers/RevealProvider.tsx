@@ -1,5 +1,5 @@
 "use client";
-import { dasUmi } from "@/lib/web3";
+import { dasUmi } from "@chomp/lib/web3";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { ISolana } from "@dynamic-labs/solana";
 import { publicKey } from "@metaplex-foundation/umi";

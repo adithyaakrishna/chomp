@@ -1,9 +1,9 @@
-import { getDeckDetails } from "@/app/queries/deck";
+import { getDeckDetails } from "@chomp/app/queries/deck";
 import dynamic from "next/dynamic";
 import { redirect } from "next/navigation";
 
 const DeckDetails = dynamic(
-  () => import("@/app/components/DeckDetails/DeckDetails"),
+  () => import("@chomp/app/components/DeckDetails/DeckDetails"),
   { ssr: false },
 );
 

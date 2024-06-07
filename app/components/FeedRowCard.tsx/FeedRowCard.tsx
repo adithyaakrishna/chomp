@@ -1,6 +1,6 @@
 "use client";
-import { ElementType } from "@/app/queries/question";
-import { DeckQuestionIncludes } from "@/app/utils/question";
+import { ElementType } from "@chomp/app/queries/question";
+import { DeckQuestionIncludes } from "@chomp/app/utils/question";
 import { ChompResult, Deck, Question } from "@prisma/client";
 import { DeckRowCard } from "../DeckRowCard/DeckRowCard";
 import { QuestionRowCard } from "../QuestionRowCard/QuestionRowCard";

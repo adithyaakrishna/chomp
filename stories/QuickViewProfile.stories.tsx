@@ -1,4 +1,4 @@
-import { QuickViewProfile } from "@/app/components/QuickViewProfile/QuickViewProfile";
+import { QuickViewProfile } from "@chomp/app/components/QuickViewProfile/QuickViewProfile";
 import { DynamicContextProvider } from "@dynamic-labs/sdk-react-core";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";

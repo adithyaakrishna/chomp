@@ -1,4 +1,4 @@
-import { getUserTokenBalances } from "@/app/queries/user";
+import { getUserTokenBalances } from "@chomp/app/queries/user";
 
 export const UserTokenBalance = async () => {
   const { bonk } = await getUserTokenBalances();

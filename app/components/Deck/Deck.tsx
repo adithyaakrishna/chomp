@@ -1,8 +1,8 @@
 "use client";
-import { SaveQuestionRequest, saveDeck } from "@/app/actions/answer";
-import { useRandom } from "@/app/hooks/useRandom";
-import { useStopwatch } from "@/app/hooks/useStopwatch";
-import { getAlphaIdentifier } from "@/app/utils/question";
+import { SaveQuestionRequest, saveDeck } from "@chomp/app/actions/answer";
+import { useRandom } from "@chomp/app/hooks/useRandom";
+import { useStopwatch } from "@chomp/app/hooks/useStopwatch";
+import { getAlphaIdentifier } from "@chomp/app/utils/question";
 import { QuestionTag, QuestionType, Tag } from "@prisma/client";
 import dayjs from "dayjs";
 import {

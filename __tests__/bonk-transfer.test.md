@@ -5,7 +5,7 @@ import {
 	ACCOUNT_SIZE,
 	TOKEN_PROGRAM_ID,
 } from "@solana/spl-token";
-import { genBonkTransferTx } from "@/app/utils/solana";
+import { genBonkTransferTx } from "@chomp/app/utils/solana";
 import { PublicKey, Transaction, SystemProgram, Keypair } from "@solana/web3.js";
 import * as bs58 from "bs58";
 

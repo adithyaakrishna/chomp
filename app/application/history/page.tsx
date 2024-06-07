@@ -1,24 +1,24 @@
 "use client";
-import { revealQuestions } from "@/app/actions/chompResult";
-import { HistorySortOptions } from "@/app/api/history/route";
-import { Button } from "@/app/components/Button/Button";
-import { HomeSwitchNavigation } from "@/app/components/HomeSwitchNavigation/HomeSwitchNavigation";
-import { useIsomorphicLayoutEffect } from "@/app/hooks/useIsomorphicLayoutEffect";
-import { useCollapsedContext } from "@/app/providers/CollapsedProvider";
-import { useRevealedContext } from "@/app/providers/RevealProvider";
-import { numberToCurrencyFormatter } from "@/app/utils/currency";
-import { DeckQuestionIncludes, getQuestionState } from "@/app/utils/question";
-import { getAppendedNewSearchParams } from "@/app/utils/searchParams";
+import { revealQuestions } from "@chomp/app/actions/chompResult";
+import { HistorySortOptions } from "@chomp/app/api/history/route";
+import { Button } from "@chomp/app/components/Button/Button";
+import { HomeSwitchNavigation } from "@chomp/app/components/HomeSwitchNavigation/HomeSwitchNavigation";
+import { useIsomorphicLayoutEffect } from "@chomp/app/hooks/useIsomorphicLayoutEffect";
+import { useCollapsedContext } from "@chomp/app/providers/CollapsedProvider";
+import { useRevealedContext } from "@chomp/app/providers/RevealProvider";
+import { numberToCurrencyFormatter } from "@chomp/app/utils/currency";
+import { DeckQuestionIncludes, getQuestionState } from "@chomp/app/utils/question";
+import { getAppendedNewSearchParams } from "@chomp/app/utils/searchParams";
 import { Deck } from "@prisma/client";
 import dynamic from "next/dynamic";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 const SearchFilters = dynamic(
-  () => import("@/app/components/SearchFilters/SearchFilters"),
+  () => import("@chomp/app/components/SearchFilters/SearchFilters"),
   { ssr: false },
 );
 const HistoryFeed = dynamic(
-  () => import("@/app/components/HistoryFeed/HistoryFeed"),
+  () => import("@chomp/app/components/HistoryFeed/HistoryFeed"),
   { ssr: false },
 );
 

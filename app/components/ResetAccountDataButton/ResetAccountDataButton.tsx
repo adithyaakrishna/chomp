@@ -1,6 +1,6 @@
 "use client";
 
-import { resetAccountData } from "@/app/actions/demo";
+import { resetAccountData } from "@chomp/app/actions/demo";
 import { Button } from "../Button/Button";
 
 export function ResetAccountDataButton() {

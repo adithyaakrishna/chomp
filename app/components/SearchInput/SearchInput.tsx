@@ -1,5 +1,5 @@
 "use client";
-import { useOuterClick } from "@/app/hooks/useOuterClick";
+import { useOuterClick } from "@chomp/app/hooks/useOuterClick";
 import classNames from "classnames";
 import { useRef, useState } from "react";
 import { HistoryIcon } from "../Icons/HistoryIcon";

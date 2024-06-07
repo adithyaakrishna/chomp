@@ -1,6 +1,6 @@
 "use client";
 
-import { numberToCurrencyFormatter } from "@/app/utils/currency";
+import { numberToCurrencyFormatter } from "@chomp/app/utils/currency";
 import classNames from "classnames";
 import { Avatar } from "../Avatar/Avatar";
 import { CloseIcon } from "../Icons/CloseIcon";

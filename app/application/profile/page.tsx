@@ -1,12 +1,12 @@
-import { getMyFungibleAssetBalances } from "@/app/actions/fungible-asset";
-import GeneralRankCard from "@/app/components/GeneralRankCard/GeneralRankCard";
-import { HomeSwitchNavigation } from "@/app/components/HomeSwitchNavigation/HomeSwitchNavigation";
-import { LogoutButton } from "@/app/components/LogoutButton/LogoutButton";
-import PointBalanceCard from "@/app/components/PointBalanceCard/PointBalanceCard";
-import { Profile } from "@/app/components/Profile/Profile";
-import { ResetAccountDataButton } from "@/app/components/ResetAccountDataButton/ResetAccountDataButton";
-import TagRankCard from "@/app/components/TagRankCard/TagRankCard";
-import { getProfileImage } from "@/app/queries/profile";
+import { getMyFungibleAssetBalances } from "@chomp/app/actions/fungible-asset";
+import GeneralRankCard from "@chomp/app/components/GeneralRankCard/GeneralRankCard";
+import { HomeSwitchNavigation } from "@chomp/app/components/HomeSwitchNavigation/HomeSwitchNavigation";
+import { LogoutButton } from "@chomp/app/components/LogoutButton/LogoutButton";
+import PointBalanceCard from "@chomp/app/components/PointBalanceCard/PointBalanceCard";
+import { Profile } from "@chomp/app/components/Profile/Profile";
+import { ResetAccountDataButton } from "@chomp/app/components/ResetAccountDataButton/ResetAccountDataButton";
+import TagRankCard from "@chomp/app/components/TagRankCard/TagRankCard";
+import { getProfileImage } from "@chomp/app/queries/profile";
 
 export default async function Page() {
   const isDemo = process.env.ENVIRONMENT === "demo";

@@ -1,4 +1,3 @@
-import AvatarPlaceholder from "@/public/images/avatar_placeholder.png";
 import { format } from "date-fns";
 import { enUS } from "date-fns/locale";
 import { AuthRedirect } from "../components/AuthRedirect/AuthRedirect";
@@ -8,6 +7,7 @@ import { TabNavigation } from "../components/TabNavigation/TabNavigation";
 import ConfettiProvider from "../providers/ConfettiProvider";
 import { getIsUserAdmin } from "../queries/user";
 import TutorialFlowScreens from "../screens/TutorialScreens/TutorialFlowScreens/TutorialFlowScreens";
+import AvatarPlaceholder from "/images/avatar_placeholder.png";
 
 const TutorialPage = async () => {
   const currentDate = new Date();

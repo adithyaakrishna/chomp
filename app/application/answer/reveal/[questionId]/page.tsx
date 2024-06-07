@@ -1,10 +1,10 @@
-import AnsweredQuestionShow from "@/app/components/AnsweredQuestionShow/AnsweredQuestionShow";
-import ClaimButton from "@/app/components/ClaimButton/ClaimButton";
-import { HalfArrowLeftIcon } from "@/app/components/Icons/HalfArrowLeftIcon";
-import TopInfoBox from "@/app/components/InfoBoxes/RevealPage/TopInfoBox";
-import RewardShow from "@/app/components/RewardShow/RewardShow";
-import { getQuestionWithUserAnswer } from "@/app/queries/question";
-import { isEntityRevealable } from "@/app/utils/question";
+import AnsweredQuestionShow from "@chomp/app/components/AnsweredQuestionShow/AnsweredQuestionShow";
+import ClaimButton from "@chomp/app/components/ClaimButton/ClaimButton";
+import { HalfArrowLeftIcon } from "@chomp/app/components/Icons/HalfArrowLeftIcon";
+import TopInfoBox from "@chomp/app/components/InfoBoxes/RevealPage/TopInfoBox";
+import RewardShow from "@chomp/app/components/RewardShow/RewardShow";
+import { getQuestionWithUserAnswer } from "@chomp/app/queries/question";
+import { isEntityRevealable } from "@chomp/app/utils/question";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 

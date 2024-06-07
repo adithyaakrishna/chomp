@@ -1,8 +1,8 @@
 "use client";
 
-import { revealQuestion } from "@/app/actions/chompResult";
-import { useRevealedContext } from "@/app/providers/RevealProvider";
-import { RevealedQuestion } from "@/app/queries/home";
+import { revealQuestion } from "@chomp/app/actions/chompResult";
+import { useRevealedContext } from "@chomp/app/providers/RevealProvider";
+import { RevealedQuestion } from "@chomp/app/queries/home";
 import { useRouter } from "next/navigation";
 import { Button } from "../Button/Button";
 import { HomeFeedCardCarousel } from "../HomeFeedCardsCarousel/HomeFeedCardsCarousel";

@@ -4,7 +4,7 @@ import classNames from "classnames";
 import dayjs from "dayjs";
 import Image from "next/image";
 import { CSSProperties, ReactNode, useCallback, useState } from "react";
-import gatorHeadImage from "../../../public/images/gator-head.png";
+import gatorHeadImage from "/images/gator-head.png";
 import { useInterval } from "../../hooks/useInterval";
 import {
   ONE_SECOND_IN_MILISECONDS,
@@ -112,7 +112,7 @@ export function QuestionCard({
               onClose={() => setIsViewImageOpen(false)}
               title=""
             >
-              <img src={viewImageSrc} />
+              <Image src={viewImageSrc} alt="" />
             </Modal>
           </div>
         )}

@@ -1,6 +1,6 @@
 "use client";
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
-import { getAppendedNewSearchParams } from "@/app/utils/searchParams";
+import { useLocalStorage } from "@chomp/app/hooks/useLocalStorage";
+import { getAppendedNewSearchParams } from "@chomp/app/utils/searchParams";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { FilterIcon } from "../Icons/FilterIcon";

@@ -1,6 +1,8 @@
-import { TransactionsTable } from "@/app/components/TransactionsTable/TransactionsTable";
+import { TransactionsTable } from "@chomp/app/components/TransactionsTable/TransactionsTable";
 import type { Meta, StoryObj } from "@storybook/react";
 import dayjs from "dayjs";
+
+const TransactionDate = dayjs().subtract(12, "hours").toDate();
 
 const meta = {
   title: "Transaction table/Table",
@@ -13,63 +15,63 @@ const meta = {
     transactions: [
       {
         amount: 100000,
-        date: dayjs().subtract(12, "hours").toDate(),
+        date: TransactionDate,
         amountLabel: "BONK",
         dollarAmount: 2.3,
         transactionType: "RevealAnswer",
       },
       {
         amount: 100000,
-        date: dayjs().subtract(12, "hours").toDate(),
+        date: TransactionDate,
         amountLabel: "BONK",
         dollarAmount: 2.3,
         transactionType: "RevealAnswer",
       },
       {
         amount: 100000,
-        date: dayjs().subtract(12, "hours").toDate(),
+        date: TransactionDate,
         amountLabel: "BONK",
         dollarAmount: 2.3,
         transactionType: "RevealAnswer",
       },
       {
         amount: 100000,
-        date: dayjs().subtract(12, "hours").toDate(),
+        date: TransactionDate,
         amountLabel: "BONK",
         dollarAmount: 2.3,
         transactionType: "RevealAnswer",
       },
       {
         amount: 100000,
-        date: dayjs().subtract(12, "hours").toDate(),
+        date: TransactionDate,
         amountLabel: "BONK",
         dollarAmount: 2.3,
         transactionType: "RevealAnswer",
       },
       {
         amount: 100000,
-        date: dayjs().subtract(12, "hours").toDate(),
+        date: TransactionDate,
         amountLabel: "BONK",
         dollarAmount: 2.3,
         transactionType: "RevealAnswer",
       },
       {
         amount: 100000,
-        date: dayjs().subtract(12, "hours").toDate(),
+        date: TransactionDate,
         amountLabel: "BONK",
         dollarAmount: 2.3,
         transactionType: "RevealAnswer",
       },
       {
         amount: 100000,
-        date: dayjs().subtract(12, "hours").toDate(),
+        date: TransactionDate,
         amountLabel: "BONK",
         dollarAmount: 2.3,
         transactionType: "RevealAnswer",
       },
       {
         amount: 100000,
-        date: dayjs().subtract(12, "hours").toDate(),
+        date: TransactionDate,
         amountLabel: "BONK",
         dollarAmount: 2.3,
         transactionType: "RevealAnswer",

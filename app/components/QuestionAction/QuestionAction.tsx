@@ -5,6 +5,7 @@ import { Button } from "../Button/Button";
 import { QuestionStep } from "../Question/Question";
 import { TrueFalseScale } from "../TrueFalseScale/TrueFalseScale";
 import { BINARY_QUESTION_ICON } from "./constants";
+import { useSwipeable } from "react-swipeable";
 
 type QuestionOption = {
   id: number;
@@ -31,13 +32,21 @@ export function QuestionAction({
   percentage = 50,
   setPercentage,
 }: QuestionActionProps) {
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => onButtonClick("no"), // Assuming "no" corresponds to a specific ID or action
+    onSwipedRight: () => onButtonClick("yes"), // Assuming "yes" corresponds to a specific ID or action
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
   if (type === "BinaryQuestion" && step === QuestionStep.AnswerQuestion) {
     return (
       <div className="text-center text-white font-semibold">
         <div className="text-md mb-4">
           What do you think about this statement?
         </div>
-        <div className="flex gap-2">
+        <div {...handlers} className="flex gap-2">
           {questionOptions?.map((qo) => (
             <Button
               onClick={() => onButtonClick(qo.id)}

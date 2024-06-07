@@ -1,9 +1,9 @@
 "use client";
-import { useMetadata } from "@/app/providers/MetadataProvider";
+import { useMetadata } from "@chomp/app/providers/MetadataProvider";
 import {
   DeckQuestionIncludes,
   mapQuestionToBinaryQuestionAnswer,
-} from "@/app/utils/question";
+} from "@chomp/app/utils/question";
 import { useCallback, useMemo, useState } from "react";
 import { BooleanAnsweredContent } from "../BooleanAnsweredContent/BooleanAnsweredContent";
 import { AnswerResultIcon } from "../Icons/AnswerResultIcon";
@@ -12,6 +12,7 @@ import { InfoIcon } from "../Icons/InfoIcon";
 import { PercentageIcon } from "../Icons/PercentageIcon";
 import { Modal } from "../Modal/Modal";
 import { MultipleChoiceAnsweredContent } from "../MultipleChoiceAnsweredContent/MultipleChoiceAnsweredContent";
+import Image from "next/image";
 
 type AnsweredQuestionContentProps = {
   element: DeckQuestionIncludes;
@@ -78,7 +79,7 @@ export const AnsweredQuestionContent = ({
             onClose={() => setIsViewImageOpen(false)}
             title=""
           >
-            <img src={element.imageUrl} />
+            <Image src={element.imageUrl} alt="" />
           </Modal>
         </div>
       )}

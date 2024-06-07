@@ -1,13 +1,13 @@
 import {
   getMyFungibleAssetBalances,
   getTransactionHistory,
-} from "@/app/actions/fungible-asset";
-import { getJwtPayload } from "@/app/actions/jwt";
-import { TransactionProfile } from "@/app/components/TransactionProfile/TransactionProfile";
-import { TransactionsBackButton } from "@/app/components/TransactionsBackButton/TransactionsBackButton";
-import { TransactionsTable } from "@/app/components/TransactionsTable/TransactionsTable";
-import { WalletWidget } from "@/app/components/WalletWidget/WalletWidget";
-import { getProfileImage } from "@/app/queries/profile";
+} from "@chomp/app/actions/fungible-asset";
+import { getJwtPayload } from "@chomp/app/actions/jwt";
+import { TransactionProfile } from "@chomp/app/components/TransactionProfile/TransactionProfile";
+import { TransactionsBackButton } from "@chomp/app/components/TransactionsBackButton/TransactionsBackButton";
+import { TransactionsTable } from "@chomp/app/components/TransactionsTable/TransactionsTable";
+import { WalletWidget } from "@chomp/app/components/WalletWidget/WalletWidget";
+import { getProfileImage } from "@chomp/app/queries/profile";
 
 type PageProps = {};
 

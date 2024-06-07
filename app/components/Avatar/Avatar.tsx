@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { CSSProperties } from "react";
+import Image from "next/image";
 
 type AvatarProps = {
   src: string;
@@ -25,7 +26,7 @@ export function Avatar({ src, size, className, style }: AvatarProps) {
   };
 
   return (
-    <img
+    <Image
       src={src}
       alt="Avatar"
       width={resolveDimensions()}

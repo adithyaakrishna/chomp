@@ -1,15 +1,15 @@
 "use client";
-import { revealDeck } from "@/app/actions/chompResult";
-import { useIsomorphicLayoutEffect } from "@/app/hooks/useIsomorphicLayoutEffect";
-import { useWindowSize } from "@/app/hooks/useWindowSize";
-import { useCollapsedContext } from "@/app/providers/CollapsedProvider";
-import { useRevealedContext } from "@/app/providers/RevealProvider";
+import { revealDeck } from "@chomp/app/actions/chompResult";
+import { useIsomorphicLayoutEffect } from "@chomp/app/hooks/useIsomorphicLayoutEffect";
+import { useWindowSize } from "@chomp/app/hooks/useWindowSize";
+import { useCollapsedContext } from "@chomp/app/providers/CollapsedProvider";
+import { useRevealedContext } from "@chomp/app/providers/RevealProvider";
 import {
   DeckQuestionIncludes,
   getDeckState,
   getQuestionState,
-} from "@/app/utils/question";
-import { getAppendedNewSearchParams } from "@/app/utils/searchParams";
+} from "@chomp/app/utils/question";
+import { getAppendedNewSearchParams } from "@chomp/app/utils/searchParams";
 import { ChompResult, Deck } from "@prisma/client";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useRef } from "react";

@@ -1,5 +1,5 @@
-import { HomeFeedQuestionCard } from "@/app/components/HomeFeedQuestionCard/HomeFeedQuestionCard";
-import { CloseIcon } from "@/app/components/Icons/CloseIcon";
+import { HomeFeedQuestionCard } from "@chomp/app/components/HomeFeedQuestionCard/HomeFeedQuestionCard";
+import { CloseIcon } from "@chomp/app/components/Icons/CloseIcon";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import dayjs from "dayjs";

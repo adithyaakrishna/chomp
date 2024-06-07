@@ -1,4 +1,4 @@
-import { useSteppingChange } from "@/app/hooks/useSteppingChange";
+import { useSteppingChange } from "@chomp/app/hooks/useSteppingChange";
 import classNames from "classnames";
 import { useState } from "react";
 import { Avatar } from "../Avatar/Avatar";

@@ -1,9 +1,9 @@
 "use client";
-import { revealQuestion } from "@/app/actions/chompResult";
-import { claimQuestion } from "@/app/actions/claim";
-import { useCollapsedContext } from "@/app/providers/CollapsedProvider";
-import { useRevealedContext } from "@/app/providers/RevealProvider";
-import { DeckQuestionIncludes, getQuestionState } from "@/app/utils/question";
+import { revealQuestion } from "@chomp/app/actions/chompResult";
+import { claimQuestion } from "@chomp/app/actions/claim";
+import { useCollapsedContext } from "@chomp/app/providers/CollapsedProvider";
+import { useRevealedContext } from "@chomp/app/providers/RevealProvider";
+import { DeckQuestionIncludes, getQuestionState } from "@chomp/app/utils/question";
 import Link from "next/link";
 import { useCallback } from "react";
 import { AnsweredQuestionContent } from "../AnsweredQuestionContent/AnsweredQuestionContent";
